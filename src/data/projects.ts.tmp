@@ -1,0 +1,6 @@
+import {socials} from './socials';
+export type Project = {id:string;title:string;category:string;description:string;longDescription:string;technologies:string[];github:string;demo?:string;image?:string;featured:boolean;year:string;status:string;filters:string[];problem:string;solution:string;architecture:string[];engineering:string;results:string;screenshots?:string[];imageSource?:string;sourceNote?:string};
+const base=(id:string,title:string,category:string,repo:string)=>({id,title,category,github:`${socials.github}/${repo}`,featured:+id<5,year:'2026',status:'Open source'});
+const image=(name:string)=>'/dev-parth-portfolio/images/'+name;
+
+export const projects:Project[]=[
