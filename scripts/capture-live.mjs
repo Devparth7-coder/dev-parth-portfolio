@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch();for(const[name,url] of [['vayu','https://v4-alpha-ashen.vercel.app/'],['codearena','https://codearena-nu-six.vercel.app/']]){const page=await browser.newPage({viewport:{width:1440,height:950}});try{const r=await page.goto(url,{waitUntil:'networkidle',timeout:25000});console.log(name,r.status(),(await page.locator('body').innerText()).slice(0,800));if(r.ok()){await page.screenshot({path:`artifacts/${name}-live.png`})}}catch(e){console.log(name,e.message)}await page.close()}await browser.close();

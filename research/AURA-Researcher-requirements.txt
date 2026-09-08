@@ -1,0 +1,22 @@
+# Core runtime dependencies
+fastapi>=0.110
+uvicorn[standard]>=0.29
+numpy>=1.26
+requests>=2.31
+langgraph>=0.1
+langchain-core>=0.2
+pypdf>=4.0
+
+# Optional: neural embeddings (dense retrieval)
+# sentence-transformers>=2.5
+
+# Optional: Qdrant vector database (otherwise AURA falls back to an in-memory store)
+# qdrant-client>=1.8
+
+# Optional: hosted LLM synthesis (otherwise AURA uses deterministic synthesis)
+# openai>=1.30
+# anthropic>=0.30
+
+# Development / testing
+pytest>=8.0
+httpx>=0.27

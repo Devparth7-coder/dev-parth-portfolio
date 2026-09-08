@@ -1,0 +1,3 @@
+export {default as codechefSnapshot} from './codechef-snapshot.json';
+export const codeforcesFallback = {rating:2137,rank:'master',maxRating:2137,handle:'dparth_7',verifiedAt:'2026-09-08'};
+export const journey = [{year:'2023',title:'The beginning',text:'Started exploring programming and building projects.'},{year:'2024',title:'Building',text:'Expanded into web development, AI/ML, competitions, and larger projects.'},{year:'2025',title:'Engineering',text:'Focused on intelligent applications and complex software systems.'},{year:'2026',title:'Agentic systems',text:'Building research systems, developer infrastructure, and reliability-focused research.'}];

@@ -1,0 +1,1 @@
+export const socials = {github:'https://github.com/Devparth7-coder',linkedin:'https://www.linkedin.com/in/dev-parth-4b6766392/',codeforces:'https://codeforces.com/profile/dparth_7',codechef:'https://www.codechef.com/users/true_field_64'};

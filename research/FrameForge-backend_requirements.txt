@@ -1,0 +1,18 @@
+# FRAMEFORGE AI — backend dependencies
+fastapi>=0.110
+uvicorn[standard]>=0.27
+sqlalchemy>=2.0
+pydantic>=2.6
+pydantic-settings>=2.2
+pillow>=10.0
+numpy>=1.26
+httpx>=0.27
+python-multipart>=0.0.9
+pypdf>=4.0          # .pdf upload extraction
+python-docx>=1.1    # .docx upload extraction
+pytest>=8.0
+
+# Optional real providers (install to enable):
+# openai>=1.30        # OpenAI LLM + image generation
+# google-generativeai # Gemini LLM
+# anthropic>=0.25     # Anthropic LLM

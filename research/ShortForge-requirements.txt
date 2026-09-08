@@ -1,0 +1,7 @@
+flask>=3.0
+requests>=2.31
+edge-tts>=6.1
+gTTS>=2.5
+openai>=1.40
+pydub>=0.25
+pillow>=10.0

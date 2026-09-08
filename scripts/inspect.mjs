@@ -1,0 +1,5 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+page.on('pageerror',e=>console.log('PAGEERROR',e.message));await page.goto('http://localhost:5173');await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:'artifacts/desktop.png'});await page.locator('#work').scrollIntoViewIfNeeded();await page.waitForTimeout(800);await page.screenshot({path:'artifacts/work.png'});
+for(const width of [1440,1280,1024,768,390,375]){await page.setViewportSize({width,height:900});await page.goto('http://localhost:5173');await page.evaluate(()=>document.fonts.ready);console.log(width,await page.evaluate(()=>({body:document.body.scrollWidth,viewport:window.innerWidth,cards:document.querySelectorAll('.project-card').length,overflow:[...document.querySelectorAll('body *')].filter(el=>el.getBoundingClientRect().right>window.innerWidth+2&&getComputedStyle(el).position!=='fixed').map(el=>el.className).slice(0,10)})));if(width===390)await page.screenshot({path:'artifacts/mobile.png'})}
+await browser.close();
